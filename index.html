@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mi Invitación</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: #f7f2ec;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* PORTADA */
+    #portada {
+      height: 100vh;
+      min-height: 650px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+
+      background:
+        linear-gradient(rgba(247,242,236,.75), rgba(247,242,236,.9)),
+        url("portada.png") center/cover no-repeat;
+    }
+
+    #portada h1 {
+      font-size: 42px;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    #portada h2 {
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 40px;
+    }
+
+    /* BOTÓN */
+    #openInvitation {
+      border: 1px solid #b99b6b;
+      background: rgba(255,255,255,.9);
+      color: #765f3e;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 15px;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    #openInvitation:active {
+      transform: scale(.96);
+    }
+
+    /* SECCIONES */
+    section:not(#portada) {
+      min-height: 100vh;
+      padding: 80px 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contenido {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .contenido h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .contenido p {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* BOTÓN DE MÚSICA */
+    #musicButton {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #b99b6b;
+      background: rgba(255,255,255,.95);
+      cursor: pointer;
+      z-index: 9999;
+      font-size: 20px;
+    }
+
+    /* TRANSICIÓN */
+    .oculto {
+      display: none;
+    }
+
+    .fade {
+      animation: aparecer 1.2s ease;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      #portada h1 {
+        font-size: 34px;
+      }
+
+      #portada h2 {
+        font-size: 21px;
+      }
+
+      .contenido h2 {
+        font-size: 28px;
+      }
+
+      .contenido p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MÚSICA: SOLO EXISTE UNA VEZ -->
+  <audio id="music" loop preload="auto">
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <!-- PORTADA -->
+  <section id="portada">
+
+    <h1>Mis XV Años</h1>
+
+    <h2>Daniela Mayte</h2>
+
+    <button id="openInvitation">
+      ABRIR INVITACIÓN
+    </button>
+
+  </section>
+
+
+  <!-- PRESENTACIÓN -->
+  <section>
+    <div class="contenido">
+
+      <h2>Una celebración especial</h2>
+
+      <p>
+        Con la bendición de Dios y de mi familia,
+        quiero compartir contigo este momento
+        tan especial.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- FECHA -->
+  <section>
+    <div class="contenido">
+
+      <h2>Mis XV Años</h2>
+
+      <p>
+        Sábado<br>
+        <strong>15 de mayo de 2027</strong>
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- PADRES -->
+  <section>
+    <div class="contenido">
+
+      <h2>Mis Padres</h2>
+
+      <p>
+        Con todo mi amor<br><br>
+
+        Nombre del papá<br>
+        &<br>
+        Nombre de la mamá
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- PADRINOS -->
+  <section>
+    <div class="contenido">
+
+      <h2>Mis Padrinos</h2>
+
+      <p>
+        Nombre del padrino<br>
+        &<br>
+        Nombre de la madrina
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- CEREMONIA -->
+  <section>
+    <div class="contenido">
+
+      <h2>Ceremonia</h2>
+
+      <p>
+        ⛪<br><br>
+
+        1:00 PM<br><br>
+
+        Nombre de la iglesia<br>
+        Dirección
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- RECEPCIÓN -->
+  <section>
+    <div class="contenido">
+
+      <h2>Recepción</h2>
+
+      <p>
+        🥂<br><br>
+
+        3:00 PM<br><br>
+
+        Nombre del salón<br>
+        Dirección
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- CONFIRMACIÓN -->
+  <section>
+    <div class="contenido">
+
+      <h2>¡Te esperamos!</h2>
+
+      <p>
+        Será un honor compartir
+        esta noche contigo.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- BOTÓN DE MÚSICA -->
+  <button id="musicButton">
+    🎵
+  </button>
+
+
+  <script>
+
+    const music = document.getElementById("music");
+
+    const openButton =
+      document.getElementById("openInvitation");
+
+    const musicButton =
+      document.getElementById("musicButton");
+
+
+    /* AL TOCAR ABRIR:
+       LA MÚSICA COMIENZA */
+
+    openButton.addEventListener("click", async () => {
+
+      try {
+
+        await music.play();
+
+        window.scrollTo({
+          top: window.innerHeight,
+          behavior: "smooth"
+        });
+
+      } catch (error) {
+
+        console.log(
+          "El navegador bloqueó la reproducción:",
+          error
+        );
+
+      }
+
+    });
+
+
+    /* PAUSAR / REANUDAR */
+
+    musicButton.addEventListener("click", async () => {
+
+      if (music.paused) {
+
+        await music.play();
+
+        musicButton.textContent = "🎵";
+
+      } else {
+
+        music.pause();
+
+        musicButton.textContent = "🔇";
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
