@@ -23,7 +23,36 @@
       color: #333;
       overflow-x: hidden;
     }
+/* PORTADA */
+#portada {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
 
+.portada-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ZONA INVISIBLE PARA TOCAR EL SOBRE */
+.sobre-click {
+  position: absolute;
+  top: 38%;
+  left: 25%;
+  width: 50%;
+  height: 25%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+}
     /* PORTADA */
     #portada {
       height: 100vh;
@@ -156,18 +185,23 @@
   </audio>
 
 
-  <!-- PORTADA -->
-  <section id="portada">
+<!-- PORTADA -->
+<section id="portada">
 
-    <h1>Mis XV Años</h1>
+  <img
+    src="portada.png"
+    class="portada-imagen"
+    alt="Invitación de Beatriz Yatziri"
+  >
 
-    <h2>Daniela Mayte</h2>
+  <!-- Zona invisible sobre el sobre -->
+  <button
+    id="openInvitation"
+    class="sobre-click"
+    aria-label="Abrir invitación">
+  </button>
 
-    <button id="openInvitation">
-      ABRIR INVITACIÓN
-    </button>
-
-  </section>
+</section>
 
 
   <!-- PRESENTACIÓN -->
