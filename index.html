@@ -31,27 +31,31 @@
   padding: 0;
   margin: 0;
   overflow: hidden;
-}
 
 .portada-imagen {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  background: #f7f2ec;
 }
 
-/* ZONA INVISIBLE PARA TOCAR EL SOBRE */
 .sobre-click {
   position: absolute;
   top: 38%;
   left: 25%;
   width: 50%;
   height: 25%;
-  background: transparent;
-  border: none;
-  padding: 0;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  opacity: 1;
   cursor: pointer;
   z-index: 10;
+}
 }
     /* PORTADA */
     #portada {
