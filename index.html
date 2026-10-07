@@ -25,26 +25,35 @@
     }
 /* PORTADA */
 #portada {
-  position: relative;
   width: 100%;
   height: 100vh;
-  padding: 0;
+  min-height: 650px;
   margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-
-.portada-imagen {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
   background: #f7f2ec;
 }
 
+/* IMAGEN DE CANVA */
+.portada-imagen {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* ZONA INVISIBLE SOBRE EL SOBRE */
 .sobre-click {
   position: absolute;
   top: 38%;
-  left: 25%;
-  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
   height: 25%;
   background: transparent !important;
   border: none !important;
@@ -52,54 +61,17 @@
   margin: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  opacity: 1;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
 }
-}
-    /* PORTADA */
-    #portada {
-      height: 100vh;
-      min-height: 650px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 30px;
 
-      background:
-        linear-gradient(rgba(247,242,236,.75), rgba(247,242,236,.9)),
-        url("portada.png") center/cover no-repeat;
-    }
+/* EVITAR EL ESTILO BLANCO DEL BOTÓN */
+#openInvitation {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 
-    #portada h1 {
-      font-size: 42px;
-      letter-spacing: 4px;
-      margin-bottom: 15px;
-    }
-
-    #portada h2 {
-      font-size: 25px;
-      font-weight: normal;
-      margin-bottom: 40px;
-    }
-
-    /* BOTÓN */
-    #openInvitation {
-      border: 1px solid #b99b6b;
-      background: rgba(255,255,255,.9);
-      color: #765f3e;
-      padding: 15px 30px;
-      border-radius: 30px;
-      font-size: 15px;
-      letter-spacing: 2px;
-      cursor: pointer;
-    }
-
-    #openInvitation:active {
-      transform: scale(.96);
-    }
 
     /* SECCIONES */
     section:not(#portada) {
