@@ -71,18 +71,19 @@
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
+}
 
+/* SECCIONES */
+section:not(#portada) {
+  min-height: 100vh;
+  padding: 80px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-    /* SECCIONES */
-    section:not(#portada) {
-      min-height: 100vh;
-      padding: 80px 25px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
+   
     .contenido {
       max-width: 600px;
       width: 100%;
@@ -97,7 +98,26 @@
       font-size: 18px;
       line-height: 1.8;
     }
+/* SEGUNDA SECCIÓN ANIMADA */
+.seccion-video {
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  padding: 0 !important;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #f7f2ec;
+}
 
+.seccion-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
     /* BOTÓN DE MÚSICA */
     #musicButton {
       position: fixed;
